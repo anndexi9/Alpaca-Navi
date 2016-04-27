@@ -24,23 +24,6 @@ add_user($con, $userN, $userpw, $usermail);
 mysqli_close($con);
 }
 
-//connection
-function connectMySQL() {
-$host = "127.0.0.1";
-    $user = "anndexi9";
-    $pass = "";
-    $db = "alpaca_navi";        
-    $port = 3306;
-
-    // Create connection
-    $link = mysqli_connect($host, $user, $pass, $db, $port)or die(mysql_error());
-    if (!$link) die('DB接続失敗');
-// mysql_set_charset('UTF-8',$link);
-
-return $link;
-}
-
-
 function sanitize_input($data) {
    $data = trim($data);
    $data = stripslashes($data);
@@ -74,5 +57,21 @@ function add_user($link, $un, $pw, $em){
     
     if (!$result) die($link->error);
   }
+  
+  //connection
+function connectMySQL() {
+$host = "";
+    $user = "";
+    $pass = "";
+    $db = "";        
+    $port =;
+
+    // Create connection
+    $link = mysqli_connect($host, $user, $pass, $db, $port)or die(mysql_error());
+    if (!$link) die('DB接続失敗');
+// mysql_set_charset('UTF-8',$link);
+
+return $link;
+}
 
 ?>
