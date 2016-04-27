@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>アルパカチャンネル</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    
+    
+    <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/embed.js/3.6.2/embed.min.js"></script>
+<script src="alpacaThread.js"></script>
+<script src="alpaca.js"></script>
+<script src="spot.js"></script>
+<script src="pagination.js"></script>
+ <link rel="stylesheet" href="alpacaThread.css">
+
+    <script>
+     window.onload = function()
+    {
+      console.log(document.getElementById('displayThread').innerHTML);
+      var x = new EmbedJS({
+        element: document.getElementById('displayThread'),
+        googleAuthKey : 'AIzaSyCqFouT8h5DKAbxlrTZmjXEmNBjC69f0ts',
+        inlineEmbed:'all'
+        tweetsEmbed:true
+      });
+
+      x.render();
+    };
+   
+    </script>
+    <script>
+    var app = angular.module('addThread', []);
+app.controller('myCtrl', function($scope) {
+    $scope.spot = spotArr;
+});
+</script>
+</head>
+<body>
+<header class="col-sm-12 col-md-12">
+<h2><b>アルパカナビ<span class="glyphicon glyphicon-search"></span>
+</b><small style="color:white">アルパカとあえるスポット探し</small></h2></header>
+<div id="nav01" class="col-sm-12 col-md-12"><ul>
+<li><a href="alpacaTop.html">トップページ</a></li>
+<li><a href="alpacaMap.html">マップ</a></li>
+<li><a href="alpacaDB.html">データベース</a></li>
+<li><a href="mem_poll1.php">投票</a></li>
+<li><a href="alpacaThread.html">掲示板</a></li>
+<li id="loginLink"></li>
+</ul></div>    
+    
+<div ng-app = "addThread" ng-controller="myCtrl" class="col-sm-12 col-md-12">
+
+<h3>掲示板</h3><br>
+<button class="btn btn-success" type="button" 
+data-toggle="collapse" data-target="#collapseForm" 
+aria-expanded="false" aria-controls="collapseForm"
+onclick=checkLogin(); style="font-size: 26px;">投稿</button>
+
+<div class="collapse col-sm-12 col-md-12" id="collapseForm" >
+  <div class="well">
+   <form id ="addThread" method="POST">
+    カテゴリ
+    <select id ="category" name="category" class="form-control" >
+  <option value="1">口コミ</option>
+  <option value="2">情報提供</option>
+  <option value="3">質問</option>
+</select><br>
+サブカテゴリ
+<select id = "sub_cat" name="sub_cat" class="form-control">
+   <option ng-repeat="x in spot" 
+          value="{{x.id}}">{{x.spotName}}</option>
+</select><br>
+<div id="title-group" class="form-group">
+    タイトル<br><input id ="title" type="text" name="title" class="form-control">
+    </div>
+    <div id="msg-group" class="form-group">
+     内容<br>
+<textarea id ="msg" name="msg" rows="10" cols="50" class="form-control"></textarea>
+      </div>
+    <br><input type="submit" name="submit" class="btn btn-success" value="送信">
+    <span class="fa fa-arrow-right"></span>
+</form>
+</div></div></div><!-- end of ng-app -->
+
+
+<br><br>
+<div id ="displayThread" class="col-sm-12 col-md-12"></div>
+
+<footer class="col-sm-12 col-md-12">
+2016 © Andie H. All rights reserved.
+</footer>
+</body>
+
+</html>

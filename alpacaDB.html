@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>    
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="alpaca.css">
+<script src="alpaca.js"></script>
+      <script src="alpacaDB.js"></script>
+<script src="spot.js"></script>
+<script src="spot2.js"></script>
+<script src="pagination.js"></script>
+ <script>
+     window.onload = function()
+    {
+      console.log(document.getElementById('displayDetail').innerHTML);
+      var x = new EmbedJS({
+        element: document.getElementById('displayDetail'),
+        googleAuthKey : 'AIzaSyCqFouT8h5DKAbxlrTZmjXEmNBjC69f0ts',
+        inlineEmbed:'all'
+      });
+
+      x.render();
+    };
+   
+    </script>
+</head>
+<body>
+<div class="flex-container">
+<header>
+<h2><b>アルパカナビ<span class="glyphicon glyphicon-search"></span>
+</b><small style="color:white">アルパカとあえるスポット探し</small></h2></header>
+<div id="nav01"><ul>
+<li><a href="alpacaTop.html">トップページ</a></li>
+<li><a href="alpacaMap.html">マップ</a></li>
+<li><a class="active" href="alpacaDB.html">データベース</a></li>
+<li><a href="mem_poll1.php">投票</a></li>
+<li><a href="alpacaThread.html">掲示板</a></li>
+<li id="loginLink"></li>
+</ul></div>
+<div id=displayMain>
+
+<div ng-app = "dbApp" ng-controller="dbCtrl" ng-init="showList()" class="col-sm-12 col-md-12">
+
+<div class="col-sm-12 col-md-4">
+    <h4>一つのスポットを選んでください</h4><br>
+   <form id ="dbView" method="POST">
+<select id = "stateSelect" name="stateSelect" class="form-control"  ng-init = 'selectedState=""' ng-model = "selectedState" ng-selected="showList()">
+   <option ng-repeat="x in state" 
+          value="{{x.prefecture}}">{{x.prefecture}}</option>
+</select><br>
+</form>
+
+<div id="displayList"></div>
+</div> <div class=".col-sm-12 col-md-8">
+    <br>
+  <div class="btn-group">
+  <button type="button" class="btn btn-success" id="sData" ng-click="showProfile()">スポットデータ</button>
+  <button type="button" class="btn btn-success" id="sNews" ng-click="showNews()">最新情報</button>
+  <button type="button" class="btn btn-success" id="sCmt" ng-click="showCmt()">口コミ</button>
+  <button type="button" class="btn btn-success" id="sGallery" ng-click="showGallery()">ギャラリー</button>
+</div>
+<div id="displayDetail"></div>
+</div>
+    
+</div>
+</div>
+
+
+<footer>
+2016 © Andie H. All rights reserved.
+</footer>
+
+</div>
+</body>
+</html>

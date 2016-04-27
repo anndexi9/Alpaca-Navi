@@ -1,0 +1,96 @@
+header {
+    background-color:#5ab75c;
+	font-family:Helvetica;
+	text-align:center;
+	color:white;
+	padding:5px;
+	align-content: center;
+   font-weight: bold;
+   font-size: medium;
+}
+
+#nav01 {
+
+		margin: 0;
+		padding:5px;
+    background-color:#d6f58e;
+		color:#2d6b22;
+   text-align: center;
+   -webkit-align-content: center;
+    align-content: center;
+   font-weight: bold;
+   font-size: medium;
+
+}
+
+
+#nav01 ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+#nav01 ul li {
+   margin: 0;
+   padding: 0;
+   display: inline;
+}
+
+#nav01 ul a:link{
+   margin: 0;
+   padding: .1em .7em .1em .7em;
+   text-decoration: none;
+   color: #5ab75c;
+}
+
+#nav01 ul a:visited{
+   margin: 0;
+   padding: .1em .7em .1em .7em;
+   text-decoration: none;
+   color: #5ab75c;
+}
+
+#nav01 ul a:active{
+   margin: 0;
+   padding: .1em .7em .1em .7em;
+   text-decoration: none;
+   color: white;
+}
+
+#nav01 ul a:hover{
+   margin: 0;
+   padding: .1em .7em .1em .7em;
+   text-decoration: none;
+   color: white;
+   background-color: #5ab75c;
+}
+
+h3{
+    color:#5ab75c;
+   font-weight: bold;
+   text-align:center;
+}
+#displayThread {
+     display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-justify-content: center;
+    flex-direction:row;
+    align-content: center;
+	height:auto;
+    float:left;
+	overflow: visible;
+		padding:5px;
+		margin: 0;
+		word-wrap: break-word;
+}
+
+footer {
+    background-color:#5ab75c;
+    color:white;
+	overflow: auto;
+    clear:both;
+    text-align:center;
+		height:50px;
+		padding:5px;
+}
