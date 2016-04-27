@@ -1,30 +1,9 @@
+1. This project is imcomplete.
+2. The top page file is "alpacaTop.html".
+3. It needs MySQL DB to run properly but the data of the DB for this project is not included.
+4. It is recommended to place all the files in the same folder when viewing the files. The files are not placed in sub-folders as this project is developed on online IDE which seems to have problem of linking files under sub-folders. Sorry for the inconvenience.
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
-
-
-Hi there! Welcome to Cloud9 IDE!
-
-To get you started, we have created a small hello world application.
-
-1) Open the hello-world.php file
-
-2) Follow the run instructions in the file's comments
-
-3) If you want to look at the Apache logs, check out ~/lib/apache2/log
-
-And that's all there is to it! Just have fun. Go ahead and edit the code, 
-or add new files. It's all up to you! 
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+1. このプロジェクトは完成版ではありません。
+2. トップページの見るなら、"alpacaTop.html"を開けてください。
+3. MySQL データベースのデータが入っておりませんため、データベースを利用する機能がファイルの開くだけでは見えません。
+4. 開発環境でファイルをフォルダに入れるのはうまくできませんでしたので、ファイルをフォルダに整理していませんでした。ファイルを見るとき、全部のファイルを同じところに置いてください。
