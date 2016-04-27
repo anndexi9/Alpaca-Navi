@@ -85,11 +85,11 @@ function process_pollDB($link,$vote){
 
 //connection
 function connectMySQL() {
-$host = "127.0.0.1";
-    $user = "anndexi9";
+$host = "";
+    $user = "";
     $pass = "";
-    $db = "alpaca_navi";        
-    $port = 3306;
+    $db = "";        
+    $port = ;
 
     // Create connection
     $link = mysqli_connect($host, $user, $pass, $db, $port)or die(mysql_error());
